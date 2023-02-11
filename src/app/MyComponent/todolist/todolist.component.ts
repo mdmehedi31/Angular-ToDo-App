@@ -39,4 +39,10 @@ export class TodolistComponent implements OnInit{
   ngOnInit(): void {
   }
 
+  deleteTodo(todo : ToDo){
+    console.log(todo)
+
+    const index= this.todos.indexOf(todo);
+    this.todos.splice(index,1);
+  }
 }
